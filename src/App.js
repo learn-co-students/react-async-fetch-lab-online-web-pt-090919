@@ -1,4 +1,6 @@
 // create your App component here
+import React, { Component } from 'react'
+
 class App extends React.Component {
  
   constructor() {
@@ -18,10 +20,12 @@ class App extends React.Component {
       })
   }
   
-  render(){
-    return({
-      <div>{this.state.peopleInSpace}</div>
-    })
+render() {
+    return (
+      <div>
+        {this.state.peopleInSpace.map(person => person.name)}
+      </div>
+    )
   }
  
 }
